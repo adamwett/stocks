@@ -1,0 +1,13 @@
+{
+	"tasks": {
+		"dev": "deno run -A --watch src/main.ts",
+		"types": "supabase gen types typescript --schema public --project-id yggvyfxefxytmxwninlo > src/types/schema.ts",
+		"lint": "biome check --write"
+	},
+	"imports": {
+		"@/": "./src/",
+		"@std/assert": "jsr:@std/assert@1",
+		"@supabase/supabase-js": "jsr:@supabase/supabase-js@^2.46.1",
+		"sql-csv": "npm:sql-csv@^1.0.2"
+	}
+}

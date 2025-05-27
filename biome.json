@@ -1,0 +1,59 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true,
+		"include": ["src/**/*.{js,ts,jsx,tsx}"]
+	},
+	"linter": {
+		"enabled": true,
+		"include": ["src/**/*.{js,ts,jsx,tsx}"],
+		"ignore": ["src/components/ui/*"],
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": "warn",
+				"useExhaustiveDependencies": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off"
+			},
+			"complexity": {
+				"noUselessFragments": "off"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe",
+					"options": {
+						"attributes": ["class", "className"]
+					}
+				}
+			},
+			"style": {
+				"useNumberNamespace": "off"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": true,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineWidth": 100
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"jsxQuoteStyle": "single",
+			"semicolons": "always",
+			"arrowParentheses": "always"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": true,
+			"allowTrailingCommas": true
+		}
+	}
+}
